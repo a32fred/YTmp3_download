@@ -1,9 +1,7 @@
 import youtube_dl
 def run():
     video_url = input("please enter youtube video url:")
-    video_info = youtube_dl.YoutubeDL().extract_info(
-        url = video_url,download=False
-    )
+    video_info = youtube_dl.YoutubeDL().extract_info(url = video_url,download=False)
     filename = f"{video_info['title']}.mp3"
     options={
         'format':'bestaudio/best',
